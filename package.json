@@ -7,14 +7,13 @@
     "node": ">=20.0.0"
   },
   "scripts": {
-    "build": "sh build.sh",
-    "typecheck": "tsc --noEmit",
-    "clean": "rm -rf dist script.js"
+    "start": "npx serve -s . -l $PORT",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "serve": "^14.2.0"
   },
   "devDependencies": {
-    "html-minifier-terser": "^7.2.0",
-    "sass": "^1.71.0",
-    "terser": "^5.31.0",
     "typescript": "^5.3.3"
   }
 }
