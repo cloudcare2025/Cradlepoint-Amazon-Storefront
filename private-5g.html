@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ericsson Private 5G and Neutral Host solutions - Deploy dedicated private cellular networks for manufacturing, logistics, healthcare, and enterprise campuses. Integrated with Cradlepoint NetCloud.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Cradlepoint">
+    <meta property="og:title" content="Private 5G / Neutral Host | Cradlepoint Official Store | Amazon.com">
+    <meta property="og:description" content="Ericsson Private 5G solutions for enterprise campuses, factories, and warehouses. Dedicated spectrum, ultra-low latency, and NetCloud integration.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://img.cradlepoint.com/image/upload/v1724793592/hmpg-globe_bjiwwf.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Private 5G / Neutral Host | Cradlepoint Official Store | Amazon.com">
+    <meta name="twitter:description" content="Dedicated enterprise cellular coverage powered by Ericsson Private 5G.">
+    <title>Private 5G / Neutral Host | Cradlepoint Official Store | Amazon.com</title>
+    <link rel="icon" type="image/svg+xml" href="https://img.cradlepoint.com/auto-mapping-folder/2024/09/ERI_horizontal_RGB.svg">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Cradlepoint CDN resource hints -->
+    <link rel="dns-prefetch" href="https://img.cradlepoint.com">
+    <link rel="preconnect" href="https://img.cradlepoint.com" crossorigin>
+
+    <!-- LCP: Preload hero image -->
+    <link rel="preload" as="image" href="https://img.cradlepoint.com/image/upload/v1724793592/hmpg-globe_bjiwwf.png" fetchpriority="high">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Deferred JS -->
+    <script src="script.js" defer></script>
+
+    <style>
+        /* ============================================
+           PRIVATE 5G PAGE - SPECIFIC STYLES
+           ============================================ */
+
+        /* Hero Section */
+        .p5g-hero {
+            position: relative;
+            min-height: 520px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            font-family: 'Inter', sans-serif;
+        }
+        .p5g-hero__bg {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: 0;
+            background: linear-gradient(135deg, #001a45 0%, #002561 30%, #0a0a1a 100%);
+        }
+        .p5g-hero__bg img {
+            width: 100%; height: 100%; object-fit: cover;
+            opacity: 0.25;
+            mix-blend-mode: screen;
+        }
+        .p5g-hero__grid {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image:
+                radial-gradient(circle at 70% 40%, rgba(0,130,240,0.08) 0%, transparent 50%),
+                linear-gradient(rgba(0,130,240,0.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0,130,240,0.04) 1px, transparent 1px);
+            background-size: 100% 100%, 80px 80px, 80px 80px;
+            z-index: 2;
+        }
+        .p5g-hero__content {
+            position: relative;
+            z-index: 3;
+            max-width: 680px;
+            padding: 80px 0;
+        }
+        .p5g-hero__label {
+            display: inline-block;
+            font-family: 'Inter', sans-serif;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #0082f0;
+            margin-bottom: 16px;
+            background: rgba(0,130,240,0.15);
+            padding: 6px 14px;
+            border-radius: 4px;
+        }
+        .p5g-hero__title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 56px;
+            font-weight: 700;
+            color: #fff;
+            line-height: 1.1;
+            letter-spacing: -0.5px;
+            margin-bottom: 20px;
+        }
+        .p5g-hero__sub {
+            font-family: 'Inter', sans-serif;
+            font-size: 18px;
+            font-weight: 300;
+            color: rgba(255,255,255,0.8);
+            line-height: 1.7;
+            margin-bottom: 32px;
+            max-width: 580px;
+        }
+
+        /* Solution Cards */
+        .p5g-solutions {
+            padding: 60px 0 80px;
+            background: var(--color-bg-light, #f7f8fa);
+            font-family: 'Inter', sans-serif;
+        }
+        .p5g-solutions .product-grid {
+            grid-template-columns: repeat(3, 1fr);
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .p5g-solution-card {
+            background: var(--color-bg-white, #fff);
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 0;
+            text-align: left;
+            transition: transform 0.3s cubic-bezier(0.4,0,0.2,1), box-shadow 0.3s cubic-bezier(0.4,0,0.2,1);
+            overflow: hidden;
+            cursor: default;
+        }
+        .p5g-solution-card:hover {
+            box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+            transform: translateY(-6px);
+        }
+        .p5g-solution-card__image {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+        .p5g-solution-card__image img {
+            width: 100%; height: 100%; object-fit: cover;
+            transition: transform 0.4s cubic-bezier(0.4,0,0.2,1);
+        }
+        .p5g-solution-card:hover .p5g-solution-card__image img {
+            transform: scale(1.05);
+        }
+        .p5g-solution-card__image-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(180deg, transparent 40%, rgba(0,37,97,0.6) 100%);
+        }
+        .p5g-solution-card__body {
+            padding: 28px 24px 24px;
+        }
+        .p5g-solution-card__badge {
+            display: inline-block;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            padding: 4px 10px;
+            border-radius: 4px;
+            margin-bottom: 12px;
+            background: rgba(0,37,97,0.08);
+            color: #002561;
+        }
+        .p5g-solution-card__name {
+            font-family: 'Oswald', sans-serif;
+            font-size: 22px;
+            font-weight: 600;
+            color: #1f2929;
+            margin-bottom: 12px;
+            line-height: 1.2;
+            letter-spacing: 0.3px;
+        }
+        .p5g-solution-card__desc {
+            font-size: 14px;
+            color: #4b5563;
+            line-height: 1.65;
+            margin-bottom: 20px;
+        }
+        .p5g-solution-card__features {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-bottom: 24px;
+            padding: 16px 0;
+            border-top: 1px solid #e5e7eb;
+        }
+        .p5g-feature-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 13px;
+            color: #4b5563;
+            line-height: 1.4;
+        }
+        .p5g-feature-item__icon {
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .p5g-solution-card__cta {
+            width: 100%;
+        }
+
+        /* Use Cases Section */
+        .p5g-use-cases {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #001a45 0%, #002561 100%);
+            font-family: 'Inter', sans-serif;
+            position: relative;
+            overflow: hidden;
+        }
+        .p5g-use-cases::before {
+            content: '';
+            position: absolute;
+            top: -30%; left: -15%;
+            width: 500px; height: 500px;
+            background: radial-gradient(circle, rgba(0,130,240,0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        .p5g-use-cases::after {
+            content: '';
+            position: absolute;
+            bottom: -40%; right: -10%;
+            width: 600px; height: 600px;
+            background: radial-gradient(circle, rgba(0,130,240,0.08) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        .p5g-use-cases__grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            margin-top: 40px;
+            position: relative;
+            z-index: 1;
+        }
+        .p5g-use-case-card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 32px 24px;
+            text-align: center;
+            transition: transform 0.25s cubic-bezier(0.4,0,0.2,1), background 0.25s cubic-bezier(0.4,0,0.2,1);
+        }
+        .p5g-use-case-card:hover {
+            transform: translateY(-4px);
+            background: rgba(255,255,255,0.08);
+        }
+        .p5g-use-case-card__icon {
+            width: 56px; height: 56px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0,130,240,0.15);
+            border-radius: 12px;
+        }
+        .p5g-use-case-card__title {
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+        .p5g-use-case-card__text {
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            color: rgba(255,255,255,0.65);
+            line-height: 1.6;
+        }
+
+        /* CTA Section */
+        .p5g-cta {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #1f2929 0%, #001a45 100%);
+            text-align: center;
+            font-family: 'Inter', sans-serif;
+        }
+        .p5g-cta__title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 36px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 16px;
+        }
+        .p5g-cta__text {
+            font-size: 16px;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 32px;
+            max-width: 560px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+        .p5g-cta__buttons {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .p5g-cta__btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 32px;
+            font-size: 15px;
+            font-weight: 600;
+            font-family: 'Inter', sans-serif;
+            border-radius: 50px;
+            background: transparent;
+            color: #fff;
+            border: 2px solid rgba(255,255,255,0.3);
+            cursor: pointer;
+            text-decoration: none;
+            transition: transform 0.25s cubic-bezier(0.4,0,0.2,1), border-color 0.25s cubic-bezier(0.4,0,0.2,1), background 0.25s cubic-bezier(0.4,0,0.2,1);
+        }
+        .p5g-cta__btn-secondary:hover {
+            border-color: #0082f0;
+            background: rgba(0,130,240,0.08);
+            transform: translateY(-2px);
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .p5g-solutions .product-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 1024px) {
+            .p5g-hero__title { font-size: 44px; }
+            .p5g-use-cases__grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .p5g-hero { min-height: 420px; }
+            .p5g-hero__title { font-size: 36px; }
+            .p5g-hero__content { padding: 60px 0; }
+            .p5g-solutions .product-grid { grid-template-columns: 1fr; max-width: 500px; }
+            .p5g-use-cases__grid { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 480px) {
+            .p5g-hero__title { font-size: 28px; }
+            .p5g-hero__sub { font-size: 15px; }
+            .p5g-cta__title { font-size: 28px; }
+            .p5g-solution-card__name { font-size: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip Navigation Link -->
+    <a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:10000;padding:8px 16px;background:#1f2929;color:#fff;font-size:14px;text-decoration:none;font-family:Inter,Arial,sans-serif;" onfocus="this.style.position='fixed';this.style.left='16px';this.style.top='16px';this.style.width='auto';this.style.height='auto';this.style.overflow='visible';" onblur="this.style.position='absolute';this.style.left='-9999px';this.style.width='1px';this.style.height='1px';this.style.overflow='hidden';">Skip to main content</a>
+
+    <!-- Amazon Header Bar -->
+    <header class="amazon-header" role="banner">
+        <div class="amazon-header__top">
+            <div class="amazon-header__container">
+                <a href="#" class="amazon-header__logo" aria-label="Amazon Home">
+                    <img loading="lazy" src="logos/amazon-logo-white.svg" alt="Amazon" class="amazon-logo-svg" width="108" height="33">
+                </a>
+
+                <div class="amazon-header__deliver">
+                    <span class="amazon-header__deliver-label">Deliver to</span>
+                    <span class="amazon-header__deliver-location">New York 10001</span>
+                </div>
+
+                <div class="amazon-header__search" role="search">
+                    <select class="amazon-header__search-category" aria-label="Search category">
+                        <option>All Departments</option>
+                        <option>Electronics</option>
+                        <option>Computers</option>
+                        <option>Office Products</option>
+                    </select>
+                    <input type="text" class="amazon-header__search-input" placeholder="Search Amazon" aria-label="Search">
+                    <button class="amazon-header__search-btn" aria-label="Search Amazon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                            <path d="M21 21L16.65 16.65M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="amazon-header__nav-right">
+                    <a href="#" class="amazon-header__nav-item" aria-label="Choose language: English">
+                        <span class="amazon-header__nav-label">EN</span>
+                    </a>
+                    <a href="#" class="amazon-header__nav-item" aria-label="Hello, Sign in. Account and Lists">
+                        <span class="amazon-header__nav-top">Hello, Sign in</span>
+                        <span class="amazon-header__nav-bottom">Account & Lists</span>
+                    </a>
+                    <a href="#" class="amazon-header__nav-item" aria-label="Returns and Orders">
+                        <span class="amazon-header__nav-top">Returns</span>
+                        <span class="amazon-header__nav-bottom">& Orders</span>
+                    </a>
+                    <a href="#" class="amazon-header__cart" aria-label="Shopping cart, 0 items">
+                        <svg width="40" height="32" viewBox="0 0 40 32" aria-hidden="true" focusable="false">
+                            <path d="M30 24c-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3-1.3-3-3-3zm-18 0c-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3-1.3-3-3-3zm-.5-18L14 18h17l4-12H11.5zM31 20H13l-1-3H8l-3-9H2V6h5l8 18h16v-4z" fill="currentColor"/>
+                        </svg>
+                        <span class="amazon-header__cart-count">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <nav class="amazon-header__subnav" aria-label="Amazon departments">
+            <div class="amazon-header__container">
+                <a href="#" class="amazon-subnav__item amazon-subnav__item--menu">All</a>
+                <a href="#" class="amazon-subnav__item">Amazon Haul</a>
+                <a href="#" class="amazon-subnav__item">Medical Care</a>
+                <a href="#" class="amazon-subnav__item">Best Sellers</a>
+                <a href="#" class="amazon-subnav__item">Prime</a>
+                <a href="#" class="amazon-subnav__item">New Releases</a>
+                <a href="#" class="amazon-subnav__item">Music</a>
+                <a href="#" class="amazon-subnav__item">Today's Deals</a>
+                <a href="#" class="amazon-subnav__item">Customer Service</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Cradlepoint Brand Header -->
+    <div class="brand-header">
+        <div class="brand-header__top">
+            <div class="brand-header__container">
+                <div class="brand-header__left">
+                    <img width="200" height="40" loading="lazy" src="https://img.cradlepoint.com/auto-mapping-folder/2024/09/ERI_horizontal_RGB.svg" alt="Cradlepoint, part of Ericsson Logo" class="brand-header__logo">
+                    <button class="brand-header__follow" aria-label="Follow Cradlepoint">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                            <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        Follow
+                    </button>
+                    <button class="brand-header__share" aria-label="Share this store">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                            <path d="M18 8a3 3 0 100-6 3 3 0 000 6zM6 15a3 3 0 100-6 3 3 0 000 6zM18 22a3 3 0 100-6 3 3 0 000 6zM8.59 13.51l6.83 3.98M15.41 6.51l-6.82 3.98" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        Share
+                    </button>
+                </div>
+
+                <div class="brand-header__search" role="search">
+                    <input type="text" placeholder="Search Cradlepoint store" aria-label="Search Cradlepoint store">
+                    <button aria-label="Search Cradlepoint store">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                            <path d="M21 21L16.65 16.65M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <nav class="brand-header__nav" aria-label="Cradlepoint store navigation">
+            <div class="brand-header__container">
+                <a href="index.html" class="brand-nav__tab" data-section="home">HOME</a>
+
+                <div class="brand-nav__dropdown">
+                    <a href="wwan-routers.html" class="brand-nav__tab" data-section="wwan-routers">WWAN ROUTERS <svg class="brand-nav__caret" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    <div class="brand-nav__dropdown-menu">
+                        <a href="wwan-routers.html#e3000" class="brand-nav__dropdown-item">E3000 Series</a>
+                        <a href="wwan-routers.html#e400" class="brand-nav__dropdown-item">E400 Series</a>
+                        <a href="wwan-routers.html#e300" class="brand-nav__dropdown-item">E300 Series</a>
+                        <a href="wwan-routers.html#e100" class="brand-nav__dropdown-item">E100 Series</a>
+                        <a href="wwan-routers.html#r2400" class="brand-nav__dropdown-item">R2400</a>
+                        <a href="wwan-routers.html#r2100" class="brand-nav__dropdown-item">R2100</a>
+                        <a href="wwan-routers.html#r1900" class="brand-nav__dropdown-item">R1900 Series</a>
+                        <a href="wwan-routers.html#r980" class="brand-nav__dropdown-item">R980</a>
+                        <a href="wwan-routers.html#r920" class="brand-nav__dropdown-item">R920</a>
+                        <a href="wwan-routers.html#s700" class="brand-nav__dropdown-item">S700</a>
+                        <a href="wwan-routers.html#s400" class="brand-nav__dropdown-item">S400</a>
+                        <a href="wwan-routers.html#ibr1700" class="brand-nav__dropdown-item">IBR1700</a>
+                    </div>
+                </div>
+
+                <div class="brand-nav__dropdown">
+                    <a href="switches-access-points.html" class="brand-nav__tab" data-section="switches-access-points">LAN SWITCHES & ACCESS POINTS <svg class="brand-nav__caret" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    <div class="brand-nav__dropdown-menu">
+                        <a href="switches-access-points.html#sw2400p" class="brand-nav__dropdown-item">SW2400P Switch</a>
+                        <a href="switches-access-points.html#ap2600" class="brand-nav__dropdown-item">AP2600 Access Point</a>
+                    </div>
+                </div>
+
+                <div class="brand-nav__dropdown">
+                    <a href="wwan-adapters.html" class="brand-nav__tab" data-section="wwan-adapters">WWAN ADAPTERS <svg class="brand-nav__caret" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    <div class="brand-nav__dropdown-menu">
+                        <a href="wwan-adapters.html#w1855" class="brand-nav__dropdown-item">W1855</a>
+                        <a href="wwan-adapters.html#w1850" class="brand-nav__dropdown-item">W1850</a>
+                        <a href="wwan-adapters.html#w2005" class="brand-nav__dropdown-item">W2005</a>
+                        <a href="wwan-adapters.html#w4005" class="brand-nav__dropdown-item">W4005</a>
+                        <a href="wwan-adapters.html#l950" class="brand-nav__dropdown-item">L950</a>
+                        <a href="wwan-adapters.html#cba550" class="brand-nav__dropdown-item">CBA550</a>
+                        <a href="wwan-adapters.html#cba850" class="brand-nav__dropdown-item">CBA850</a>
+                    </div>
+                </div>
+
+                <div class="brand-nav__dropdown">
+                    <a href="private-5g.html" class="brand-nav__tab brand-nav__tab--active" data-section="private-5g">PRIVATE 5G / NEUTRAL HOST <svg class="brand-nav__caret" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    <div class="brand-nav__dropdown-menu">
+                        <a href="private-5g.html#ericsson-private-5g" class="brand-nav__dropdown-item">Ericsson Private 5G</a>
+                        <a href="private-5g.html#enterprise-5g-coverage" class="brand-nav__dropdown-item">Enterprise 5G Coverage</a>
+                        <a href="private-5g.html#radio-dot-system" class="brand-nav__dropdown-item">Radio Dot System</a>
+                    </div>
+                </div>
+
+                <div class="brand-nav__dropdown">
+                    <a href="wwan-accessories.html" class="brand-nav__tab" data-section="wwan-accessories">WWAN ACCESSORIES <svg class="brand-nav__caret" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    <div class="brand-nav__dropdown-menu">
+                        <a href="wwan-accessories.html#modular-modems" class="brand-nav__dropdown-item">Modular Modems</a>
+                        <a href="wwan-accessories.html#managed-accessories" class="brand-nav__dropdown-item">Managed Accessories</a>
+                        <a href="wwan-accessories.html#power-supplies" class="brand-nav__dropdown-item">Power Supplies</a>
+                        <a href="wwan-accessories.html#mounting" class="brand-nav__dropdown-item">Mounting</a>
+                        <a href="wwan-accessories.html#cables" class="brand-nav__dropdown-item">Cables</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <main id="main-content" class="main-content">
+        <!-- Breadcrumb -->
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <div class="container">
+                <ol class="breadcrumb__list">
+                    <li class="breadcrumb__item"><a href="#">Home</a></li>
+                    <li class="breadcrumb__item"><a href="#">Electronics</a></li>
+                    <li class="breadcrumb__item"><a href="#">Networking Products</a></li>
+                    <li class="breadcrumb__item"><a href="index.html">Cradlepoint Official Store</a></li>
+                    <li class="breadcrumb__item" aria-current="page">Private 5G / Neutral Host</li>
+                </ol>
+            </div>
+        </nav>
+
+        <!-- 1. Hero Section -->
+        <section class="p5g-hero" aria-label="Private 5G hero banner">
+            <div class="p5g-hero__bg">
+                <img width="1920" height="1080" src="https://img.cradlepoint.com/image/upload/v1724793592/hmpg-globe_bjiwwf.png" alt="" loading="eager" fetchpriority="high">
+            </div>
+            <div class="p5g-hero__grid" aria-hidden="true"></div>
+            <div class="container">
+                <div class="p5g-hero__content">
+                    <span class="p5g-hero__label">Ericsson Enterprise Solutions</span>
+                    <h1 class="p5g-hero__title">Private 5G / Neutral Host</h1>
+                    <p class="p5g-hero__sub">Ericsson Private 5G solutions enable enterprises to deploy dedicated private cellular networks for manufacturing, logistics, healthcare, and campus environments. Dedicated spectrum, ultra-low latency, and full control over your wireless infrastructure.</p>
+                    <a href="#p5g-solutions" class="btn btn--modern btn--primary btn--large">Explore Solutions &darr;</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Solution Cards -->
+        <section id="p5g-solutions" class="p5g-solutions" aria-label="Private 5G Solutions">
+            <div class="container">
+                <h2 class="section-title">Ericsson Private 5G Solutions</h2>
+                <p class="section-subtitle">Dedicated enterprise cellular coverage for campuses, factories, warehouses, and critical infrastructure</p>
+
+                <div class="product-grid">
+                    <!-- Ericsson Private 5G -->
+                    <article id="ericsson-private-5g" class="p5g-solution-card">
+                        <div class="p5g-solution-card__image">
+                            <img width="400" height="300" src="https://img.cradlepoint.com/image/upload/v1724793592/hmpg-globe_bjiwwf.png" alt="Ericsson Private 5G network solution" loading="lazy">
+                            <div class="p5g-solution-card__image-overlay"></div>
+                        </div>
+                        <div class="p5g-solution-card__body">
+                            <span class="p5g-solution-card__badge">Private Network</span>
+                            <h3 class="p5g-solution-card__name">Ericsson Private 5G</h3>
+                            <p class="p5g-solution-card__desc">Complete private 5G network solution from Ericsson. Dedicated spectrum, ultra-low latency, and full control for enterprise campuses, factories, and warehouses. Integrates with Cradlepoint NetCloud for unified management.</p>
+                            <div class="p5g-solution-card__features">
+                                <div class="p5g-feature-item">
+                                    <div class="p5g-feature-item__icon">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.5 4.5L6 12 2.5 8.5" stroke="#0082f0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    </div>
+                                    <span>Dedicated 5G spectrum (CBRS / licensed)</span>
+                                </div>
+                                <div class="p5g-feature-item">
+                                    <div class="p5g-feature-item__icon">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.5 4.5L6 12 2.5 8.5" stroke="#0082f0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    </div>
+                                    <span>Ultra-low latency (&lt;10ms)</span>
+                                </div>
+                                <div class="p5g-feature-item">
+                                    <div class="p5g-feature-item__icon">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.5 4.5L6 12 2.5 8.5" stroke="#0082f0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    </div>
+                                    <span>On-premises core network</span>
+                                </div>
+                                <div class="p5g-feature-item">
+                                    <div class="p5g-feature-item__icon">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.5 4.5L6 12 2.5 8.5" stroke="#0082f0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    </div>
+                                    <span>Ericsson Radio System</span>
+                                </div>
+                                <div class="p5g-feature-item">
+                                    <div class="p5g-feature-item__icon">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.5 4.5L6 12 2.5 8.5" stroke="#0082f0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    </div>
+                                    <span>NetCloud integration</span>
+                                </div>
+                                <div class="p5g-feature-item">
+                                    <div class="p5g-feature-item__icon">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.5 4.5L6 12 2.5 8.5" stroke="#0082f0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    </div>
+                                    <span>SLA-guaranteed coverage</span>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn--modern btn--amazon btn--small p5g-solution-card__cta">Contact Sales for Private 5G &rarr;</a>
+                        </div>
+                    </article>
+
+                    <!-- Enterprise 5G Coverage -->
+                    <article id="enterprise-5g-coverage" class="p5g-solution-card">
+                        <div class="p5g-solution-card__image">
+                            <img width="400" height="300" src="https://img.cradlepoint.com/image/upload/v1724793592/hmpg-globe_bjiwwf.png" alt="Enterprise 5G indoor and outdoor coverage" loading="lazy">
+                            <div class="p5g-solution-card__image-overlay"></div>
+                        </div>
+                        <div class="p5g-solution-card__body">
+                            <span class="p5g-solution-card__badge">Coverage Extension</span>
+                            <h3 class="p5g-solution-card__name">Enterprise 5G Coverage</h3>
+                            <p class="p5g-solution-card__desc">Carrier-grade indoor and outdoor 5G coverage for enterprise campuses. Fill coverage gaps and extend carrier 5G signals into buildings, warehouses, and hard-to-reach areas using Ericsson small cells and distributed antenna systems.</p>
+                            <div class="p5g-solution-card__features">
+                                <div class="p5g-feature-item">
+                                    <div class="p5g-feature-item__icon">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.5 4.5L6 12 2.5 8.5" stroke="#0082f0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    </div>
+                                    <span>Indoor/outdoor small cells</span>
+                                </div>
+                                <div class="p5g-feature-item">
+                                    <div class="p5g-feature-item__icon">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.5 4.5L6 12 2.5 8.5" stroke="#0082f0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    </div>
+                                    <span>Distributed Antenna Systems (DAS)</span>
+                                </div>
+                                <div class="p5g-feature-item">
+                                    <div class="p5g-feature-item__icon">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.5 4.5L6 12 2.5 8.5" stroke="#0082f0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    </div>
+                                    <span>Carrier-grade reliability</span>
+                                </div>
+                                <div class="p5g-feature-item">
+                                    <div class="p5g-feature-item__icon">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.5 4.5L6 12 2.5 8.5" stroke="#0082f0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    </div>
+                                    <span>Seamless handoff</span>
+                                </div>
+                                <div class="p5g-feature-item">
+                                    <div class="p5g-feature-item__icon">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.5 4.5L6 12 2.5 8.5" stroke="#0082f0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    </div>
+                                    <span>Multi-operator support</span>
+                                </div>
+                                <div class="p5g-feature-item">
+                                    <div class="p5g-feature-item__icon">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.5 4.5L6 12 2.5 8.5" stroke="#0082f0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    </div>
+                                    <span>Cloud-managed analytics</span>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn--modern btn--amazon btn--small p5g-solution-card__cta">Get Coverage Assessment &rarr;</a>
+                        </div>
+                    </article>
+
+                    <!-- Radio Dot System -->
+                    <article id="radio-dot-system" class="p5g-solution-card">
+                        <div class="p5g-solution-card__image">
+                            <img width="400" height="300" src="https://img.cradlepoint.com/image/upload/v1724793592/hmpg-globe_bjiwwf.png" alt="Ericsson Radio Dot System for indoor cellular coverage" loading="lazy">
+                            <div class="p5g-solution-card__image-overlay"></div>
+                        </div>
+                        <div class="p5g-solution-card__body">
+                            <span class="p5g-solution-card__badge">Indoor Coverage</span>
+                            <h3 class="p5g-solution-card__name">Radio Dot System</h3>
+                            <p class="p5g-solution-card__desc">Ericsson Radio Dot System provides carrier-grade indoor cellular coverage using a distributed radio architecture. Compact dot radios connect to a centralized indoor radio unit, delivering 4G/5G coverage across large buildings with simple Ethernet cabling.</p>
+                            <div class="p5g-solution-card__features">
+                                <div class="p5g-feature-item">
+                                    <div class="p5g-feature-item__icon">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.5 4.5L6 12 2.5 8.5" stroke="#0082f0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    </div>
+                                    <span>Compact radio dots (size of a smoke detector)</span>
+                                </div>
+                                <div class="p5g-feature-item">
+                                    <div class="p5g-feature-item__icon">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.5 4.5L6 12 2.5 8.5" stroke="#0082f0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    </div>
+                                    <span>Ethernet-powered and connected</span>
+                                </div>
+                                <div class="p5g-feature-item">
+                                    <div class="p5g-feature-item__icon">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.5 4.5L6 12 2.5 8.5" stroke="#0082f0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    </div>
+                                    <span>Multi-band 4G/5G support</span>
+                                </div>
+                                <div class="p5g-feature-item">
+                                    <div class="p5g-feature-item__icon">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.5 4.5L6 12 2.5 8.5" stroke="#0082f0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    </div>
+                                    <span>Centralized management</span>
+                                </div>
+                                <div class="p5g-feature-item">
+                                    <div class="p5g-feature-item__icon">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.5 4.5L6 12 2.5 8.5" stroke="#0082f0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    </div>
+                                    <span>Supports multiple carriers</span>
+                                </div>
+                                <div class="p5g-feature-item">
+                                    <div class="p5g-feature-item__icon">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.5 4.5L6 12 2.5 8.5" stroke="#0082f0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    </div>
+                                    <span>Ideal for hospitals, offices, warehouses</span>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn--modern btn--amazon btn--small p5g-solution-card__cta">Request Radio Dot Demo &rarr;</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Use Cases Section -->
+        <section class="p5g-use-cases" aria-label="Private 5G use cases">
+            <div class="container">
+                <h2 class="section-title section-title--white">Designed for Critical Environments</h2>
+                <p class="section-subtitle" style="color: rgba(255,255,255,0.6);">Private 5G delivers the performance, security, and control that enterprises demand</p>
+                <div class="p5g-use-cases__grid">
+                    <div class="p5g-use-case-card">
+                        <div class="p5g-use-case-card__icon">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+                                <rect x="3" y="8" width="22" height="14" rx="2" stroke="#0082f0" stroke-width="2" fill="none"/>
+                                <path d="M8 6v2M14 6v2M20 6v2M8 14h4M16 14h4M8 18h12" stroke="#0082f0" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="p5g-use-case-card__title">Manufacturing</h3>
+                        <p class="p5g-use-case-card__text">Connect autonomous guided vehicles, robotic arms, and quality inspection systems with deterministic latency on dedicated private spectrum.</p>
+                    </div>
+                    <div class="p5g-use-case-card">
+                        <div class="p5g-use-case-card__icon">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+                                <rect x="4" y="10" width="20" height="14" rx="2" stroke="#0082f0" stroke-width="2" fill="none"/>
+                                <path d="M9 4h10l2 6H7l2-6z" stroke="#0082f0" stroke-width="2" fill="none"/>
+                                <path d="M10 16h8M10 20h5" stroke="#0082f0" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="p5g-use-case-card__title">Logistics &amp; Warehousing</h3>
+                        <p class="p5g-use-case-card__text">Enable real-time inventory tracking, automated sortation, and fleet coordination across massive warehouse and distribution facilities.</p>
+                    </div>
+                    <div class="p5g-use-case-card">
+                        <div class="p5g-use-case-card__icon">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+                                <path d="M14 4l8 6v8l-8 6-8-6V10l8-6z" stroke="#0082f0" stroke-width="2" fill="none" stroke-linejoin="round"/>
+                                <path d="M14 10v4M14 18h0" stroke="#0082f0" stroke-width="2.5" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="p5g-use-case-card__title">Healthcare</h3>
+                        <p class="p5g-use-case-card__text">Deliver reliable indoor cellular coverage for connected medical devices, telemedicine carts, and clinical communication systems hospital-wide.</p>
+                    </div>
+                    <div class="p5g-use-case-card">
+                        <div class="p5g-use-case-card__icon">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+                                <circle cx="14" cy="14" r="10" stroke="#0082f0" stroke-width="2" fill="none"/>
+                                <path d="M14 8v6l4 2" stroke="#0082f0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="p5g-use-case-card__title">Enterprise Campuses</h3>
+                        <p class="p5g-use-case-card__text">Provide seamless 5G coverage across office buildings, parking structures, and outdoor areas with centralized management and multi-carrier support.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Stats Section -->
+        <section class="stats-section" aria-label="Private 5G performance statistics">
+            <div class="container">
+                <h2 class="section-title section-title--white">Enterprise-Grade Cellular</h2>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-item__number">&lt;10ms</div>
+                        <div class="stat-item__desc">Ultra-low latency for real-time industrial automation and mission-critical applications.</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-item__number">99.999%</div>
+                        <div class="stat-item__desc">Carrier-grade reliability with SLA-guaranteed uptime for your private network.</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-item__number">40%</div>
+                        <div class="stat-item__desc">Of the world's mobile networks are built by Ericsson, the technology behind Private 5G.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. CTA Section -->
+        <section class="p5g-cta" aria-label="Contact and consultation">
+            <div class="container">
+                <h2 class="p5g-cta__title">Ready to Deploy Private 5G?</h2>
+                <p class="p5g-cta__text">Talk to an Ericsson Private 5G specialist. Get a coverage assessment, spectrum analysis, and deployment plan tailored to your facility and operational requirements.</p>
+                <div class="p5g-cta__buttons">
+                    <a href="#" class="btn btn--modern btn--primary btn--large">Schedule a Consultation &rarr;</a>
+                    <a href="index.html" class="p5g-cta__btn-secondary">View All Products &rarr;</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer__back-to-top">
+            <a href="#" class="footer__back-to-top-link" aria-label="Back to top of page">Back to top</a>
+        </div>
+        <div class="footer__main">
+            <div class="container">
+                <h2 class="sr-only" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">Site footer navigation</h2>
+                <div class="footer__columns">
+                    <div class="footer__column">
+                        <h3 class="footer__column-title">Get to Know Us</h3>
+                        <ul class="footer__links">
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">About Amazon</a></li>
+                            <li><a href="#">Investor Relations</a></li>
+                            <li><a href="#">Amazon Devices</a></li>
+                            <li><a href="#">Amazon Science</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__column">
+                        <h3 class="footer__column-title">Make Money with Us</h3>
+                        <ul class="footer__links">
+                            <li><a href="#">Sell products on Amazon</a></li>
+                            <li><a href="#">Sell on Amazon Business</a></li>
+                            <li><a href="#">Sell apps on Amazon</a></li>
+                            <li><a href="#">Become an Affiliate</a></li>
+                            <li><a href="#">Advertise Your Products</a></li>
+                            <li><a href="#">Self-Publish with Us</a></li>
+                            <li><a href="#">Host an Amazon Hub</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__column">
+                        <h3 class="footer__column-title">Amazon Payment Products</h3>
+                        <ul class="footer__links">
+                            <li><a href="#">Amazon Business Card</a></li>
+                            <li><a href="#">Shop with Points</a></li>
+                            <li><a href="#">Reload Your Balance</a></li>
+                            <li><a href="#">Amazon Currency Converter</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__column">
+                        <h3 class="footer__column-title">Let Us Help You</h3>
+                        <ul class="footer__links">
+                            <li><a href="#">Amazon and COVID-19</a></li>
+                            <li><a href="#">Your Account</a></li>
+                            <li><a href="#">Your Orders</a></li>
+                            <li><a href="#">Shipping Rates & Policies</a></li>
+                            <li><a href="#">Returns & Replacements</a></li>
+                            <li><a href="#">Manage Your Content and Devices</a></li>
+                            <li><a href="#">Amazon Assistant</a></li>
+                            <li><a href="#">Help</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container">
+                <div class="footer__bottom-content">
+                    <img loading="lazy" src="logos/amazon-logo-white.svg" alt="Amazon" class="amazon-logo-svg amazon-logo-svg--footer" width="80" height="24">
+                    <div class="footer__bottom-links">
+                        <a href="#">Conditions of Use</a>
+                        <a href="#">Privacy Notice</a>
+                        <a href="#">Your Ads Privacy Choices</a>
+                    </div>
+                </div>
+                <p class="footer__copyright">&copy; 1996-2026, Amazon.com, Inc. or its affiliates</p>
+            </div>
+        </div>
+        <div class="footer__brand">
+            <div class="container">
+                <img width="200" height="40" src="https://img.cradlepoint.com/auto-mapping-folder/2024/09/ERI_horizontal_RGB.svg" alt="Cradlepoint, part of Ericsson - Official Amazon Brand Store" class="footer__brand-logo" loading="lazy">
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
