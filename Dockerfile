@@ -8,9 +8,8 @@ COPY script.js /usr/share/nginx/html/
 COPY *.html /usr/share/nginx/html/
 COPY logos/ /usr/share/nginx/html/logos/
 
-COPY nginx.conf /etc/nginx/templates/default.conf.template
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
 
-# Only substitute $PORT, leave nginx variables ($uri etc.) untouched
-ENV NGINX_ENVSUBST_FILTER=PORT
-
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["/entrypoint.sh"]
