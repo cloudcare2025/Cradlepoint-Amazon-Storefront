@@ -7,7 +7,11 @@
     "node": ">=20.0.0"
   },
   "scripts": {
+    "start": "serve -s . -l ${PORT:-3000}",
     "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "serve": "^14.2.0"
   },
   "devDependencies": {
     "typescript": "^5.3.3"
